@@ -17,8 +17,17 @@ jobs:
           version: 5.14.1
           run_install: |
             args: [--frozen-lockfile]
-      - run: pnpm install
+
+      - name: Authenticate
+        run: git config --global user.name "$GITHUB_ACTOR" && git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - run: npm version ${{ github.event.release.tag_name }}
       - run: pnpm run build
-      - run: npm publish --access public
+      - run: pnpm run test
+
+      - run: git push
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
