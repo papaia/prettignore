@@ -13,7 +13,7 @@ import { tryRequire, validateConfig } from './utils';
 async function main() {
   const config = tryRequire<PrettignoreConfig>(join(process.cwd(), '.prettignorerc.json'));
   if (!config) {
-    return console.error('Invalid / missing `.prettignorerc.json` file found. Exiting...');
+    return console.error('Invalid or missing `.prettignorerc.json` file found. Exiting...');
   }
 
   validateConfig(config);

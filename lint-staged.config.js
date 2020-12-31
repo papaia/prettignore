@@ -1,10 +1,10 @@
 // lint-staged.config.js
 const micromatch = require('micromatch');
 
-module.exports = (allStagedFiles) => {
+module.exports = (stagedFiles) => {
   const toRun = [];
-  const tsFiles = micromatch(allStagedFiles, ['**/src/*.ts']);
-  const forPrettier = micromatch(allStagedFiles, ['**/*.{md,ts,json,js}'], { ignore: 'dist' });
+  const tsFiles = micromatch(stagedFiles, ['**/src/*.ts'], { ignore: 'dist' });
+  const forPrettier = micromatch(stagedFiles, ['**/*.{md,ts,json,js}'], { ignore: 'dist' });
   if (tsFiles.length) {
     toRun.push('npm run build');
     toRun.push('npm test');

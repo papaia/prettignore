@@ -1,5 +1,7 @@
 import type { PrettignoreConfig } from './types';
 
+export const grey = (str: string): string => `\u001b[90m${str}\u001b[0m`;
+
 export function tryRequire<T>(path: string): T | null {
   try {
     return require(path);
@@ -20,5 +22,3 @@ export function validateConfig(config: PrettignoreConfig): void {
     process.exit(1);
   }
 }
-
-export const grey = (str: string): string => `\u001b[90m${str}\u001b[0m`;

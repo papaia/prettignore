@@ -8,8 +8,8 @@ const EOL = '\r\n';
 type Test = Record<string, [string, string][]>;
 
 test('format functions exist', (t) => {
-  t.assert(typeof prettignore.formatFile, 'function');
-  t.assert(typeof prettignore.formatLine, 'function');
+  t.is(typeof prettignore.formatFile, 'function');
+  t.is(typeof prettignore.formatLine, 'function');
 });
 
 const lineTests: Test = {
