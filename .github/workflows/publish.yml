@@ -14,6 +14,7 @@ jobs:
           node-version: 14
       - uses: pnpm/action-setup@v1.2.1
         with:
+          version: 5.14.1
           run_install: |
             args: [--frozen-lockfile]
       - run: pnpm install

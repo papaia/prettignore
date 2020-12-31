@@ -2,11 +2,11 @@ dependencies:
   globby: 11.0.1
   time-span: 4.0.0
 devDependencies:
+  '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@papaia/prettier': 2.0.1
   '@types/node': 14.14.17
   ava: 3.14.0
-  commitlint: 11.0.0
   husky: 4.3.6
   lint-staged: 10.5.3
   micromatch: 4.0.2
@@ -736,15 +736,6 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
-  /commitlint/11.0.0:
-    dependencies:
-      '@commitlint/cli': 11.0.0
-    dev: true
-    engines:
-      node: '>=v10.22.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-nTmP1tM52gfi39tDCN8dAlRRWJyVoJY2JuYgVhSONETGJ2MY69K/go0YbCzlIEDO/bUka5ybeI6CJz5ZicvNzg==
   /common-path-prefix/3.0.0:
     dev: true
     resolution:
@@ -3125,11 +3116,11 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@papaia/prettier': ^2.0.1
   '@types/node': ^14.14.17
   ava: ^3.14.0
-  commitlint: ^11.0.0
   globby: ^11.0.1
   husky: ^4.3.6
   lint-staged: ^10.5.3

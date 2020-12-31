@@ -1,5 +1,5 @@
-<h1 align="center">format-ignore</h2>
-<h2 align="center">Ignore File Formatter</h2>
+<h1 align="center">Prettignore</h2>
+<h2 align="center">Prettier but for ignore files!</h2>
 
 <p align="center">
   <em>
