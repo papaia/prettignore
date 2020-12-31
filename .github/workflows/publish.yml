@@ -25,9 +25,9 @@ jobs:
       - run: pnpm run build
       - run: pnpm run test
 
-      - run: git push
-        env:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: git push
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
