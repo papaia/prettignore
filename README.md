@@ -15,7 +15,7 @@ Just run `prettignore` with a valid configuration, and watch your files get pret
 
 Make a `.prettygnorerc.json` file in the root of your project.
 
-```json
+```jsonc
 {
   "eol": "crlf", // "lf" or "crlf" (default)
   "include": [], // array of globs (empty by default)
@@ -43,18 +43,14 @@ formatFile(content, { eol: 'crlf' });
 
 <!-- prettier-ignore -->
 ```
-
 #just a nice comment!
-
 ```
 
 Becomes:
 
 <!-- prettier-ignore -->
 ```
-
 # just a nice comment!
-
 ```
 
 ### Removes trailing and leading spaces and lines
@@ -72,34 +68,26 @@ Becomes:
 
 <!-- prettier-ignore -->
 ```
-
 dist
 build
-
 ```
 
-### Removes line gaps larger than 2 lines
+### Removes line gaps larger than one line
 
 <!-- prettier-ignore -->
 ```
-
 dist
 
-build
 
+
+build
 ```
 
 Becomes:
 
 <!-- prettier-ignore -->
 ```
-
 dist
 
 build
-
-```
-
-```
-
 ```
