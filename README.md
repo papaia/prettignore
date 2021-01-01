@@ -13,7 +13,7 @@ Just run `prettignore` with a valid configuration, and watch your files get pret
 
 ## Configuration
 
-Make a `.prettygnorerc.json` file in the root of your project.
+Make a `.prettignorerc.json` file in the root of your project.
 
 ```jsonc
 {
