@@ -1,7 +1,7 @@
 {
   "name": "prettignore",
   "version": "1.0.3",
-  "description": "A small package to format .*ignore files",
+  "description": "Prettier but for ignore files",
   "main": "dist/index.js",
   "files": [
     "dist"
