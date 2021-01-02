@@ -2,7 +2,7 @@ import test from 'ava';
 
 import * as prettignore from '../src';
 
-const config = { eol: 'crlf' } as const;
+const options: Required<prettignore.FormatOptions> = { endOfLine: 'crlf' };
 const EOL = '\r\n';
 
 type Test = Record<string, [string, string][]>;
@@ -53,7 +53,7 @@ const fileTests: Test = {
 for (const [name, specs] of Object.entries(fileTests)) {
   test(`whole file: ${name}`, (t) => {
     for (const [before, expected] of specs) {
-      t.is(prettignore.formatFile(before, config), expected);
+      t.is(prettignore.formatFile(before, options), expected);
     }
   });
 }

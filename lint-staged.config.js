@@ -1,4 +1,3 @@
-// lint-staged.config.js
 const micromatch = require('micromatch');
 
 module.exports = (stagedFiles) => {

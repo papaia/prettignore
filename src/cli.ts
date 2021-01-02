@@ -1,37 +1,65 @@
 #!/usr/bin/env node
 
+import { FormatOptions, formatFile, version } from '.';
 import globby from 'globby';
-import { grey } from './utils';
+import { helpMenu } from './constants';
+import { grey, tryRequire, validateConfig } from './utils';
 import { join } from 'path';
+import minimist from 'minimist';
 import { readFile, writeFile } from 'fs/promises';
 import timeSpan from 'time-span';
 
-import { formatFile } from './format';
-import type { PrettignoreConfig } from './types';
-import { tryRequire, validateConfig } from './utils';
+export interface PrettignoreConfig extends FormatOptions {
+  files: string[];
+}
 
 async function main() {
-  const config = tryRequire<PrettignoreConfig>(join(process.cwd(), '.prettignorerc.json'));
-  if (!config) {
-    return console.error('Invalid or missing `.prettignorerc.json` file found. Exiting...');
+  const { _: files, ...cliOptions } = minimist(process.argv.slice(2), {
+    string: ['endOfLine'],
+    boolean: ['help', 'version'],
+    alias: { help: 'h', version: 'v' },
+    unknown: () => false,
+  });
+
+  if (cliOptions.version) {
+    console.log(version);
+    process.exit(0);
   }
 
+  const fileOptions = tryRequire<PrettignoreConfig>(join(process.cwd(), '.prettignorerc.json'))!;
+  if (cliOptions.help || (!fileOptions && !files.length)) {
+    console.log(helpMenu);
+    process.exit(0);
+  }
+
+  const config: Required<PrettignoreConfig> = {
+    files,
+    endOfLine: 'lf',
+    ...fileOptions,
+    ...cliOptions,
+  };
+  console.log(config);
   validateConfig(config);
 
-  for await (const path of globby.stream(config.include, {
+  if (!config.files?.length) {
+    console.log(helpMenu);
+    process.exit(0);
+  }
+
+  for await (const path of globby.stream(config.files, {
     dot: true,
-    ignore: config.exclude || [],
     onlyFiles: true,
+    ignore: ['node_modules/**'],
   })) {
     const stringPath = path.toString(); // good ol' typescript
     const filepath = join(process.cwd(), stringPath);
     const end = timeSpan();
 
-    const old = await readFile(filepath, { encoding: 'utf8' });
-    const newContent = formatFile(old, { eol: config.eol || 'crlf' });
+    const oldContent = await readFile(filepath, { encoding: 'utf8' });
+    const newContent = formatFile(oldContent, config);
     await writeFile(path, newContent);
 
-    console.log(`${old === newContent ? grey(stringPath) : stringPath} ${end.rounded()}ms`);
+    console.log(`${oldContent === newContent ? grey(stringPath) : stringPath} ${end.rounded()}ms`);
   }
 }
 

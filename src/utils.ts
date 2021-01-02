@@ -1,8 +1,27 @@
-import type { PrettignoreConfig } from './types';
+import type { PrettignoreConfig } from './cli';
+
+const makeEnum = (keys: Object): any =>
+  Object.entries(keys).reduce((o, [k, v]) => ({ ...o, [k]: v, [v]: k }), {} as any);
+
+export type EndOfLine = 'lf' | 'crlf' | 'cr' | 'auto';
+export const EndOfLine: Record<EndOfLine, EndOfLine> = makeEnum({
+  auto: 'auto',
+  cr: '\r',
+  lf: '\n',
+  crlf: '\r\n',
+});
+
+export const guessEOL = (text: string): EndOfLine => {
+  const index = text.indexOf('\r');
+  if (index >= 0) {
+    return text[index + 1] === '\n' ? 'crlf' : 'cr';
+  }
+  return 'lf';
+};
 
 export const grey = (str: string): string => `\u001b[90m${str}\u001b[0m`;
 
-export function tryRequire<T>(path: string): T | null {
+export function tryRequire<T>(path: string): (T extends object ? Partial<T> : T) | null {
   try {
     return require(path);
   } catch {
@@ -10,15 +29,14 @@ export function tryRequire<T>(path: string): T | null {
   }
 }
 
-const logParamError = (option: string) =>
-  console.error(`Invalid \`${option}\` option in .prettignorerc.json`);
-export function validateConfig(config: PrettignoreConfig): void {
+const makeParamError = (param: string) =>
+  `Invalid or missing \`${param}\` option given to prettignore.`;
+export const validateConfig = (config: PrettignoreConfig) => {
   const errors = [];
-  if (!Array.isArray(config.include)) errors.push('include');
-  if (config.exclude && !Array.isArray(config.exclude)) errors.push('exclude');
-  if (config.eol && config.eol !== 'crlf' && config.eol !== 'lf') errors.push('eol');
+  if (!Array.isArray(config.files)) errors.push(makeParamError('files'));
+  if (config.endOfLine && !EndOfLine[config.endOfLine]) errors.push(makeParamError('endOfLine'));
   if (errors.length) {
-    errors.forEach(logParamError);
+    errors.forEach((e) => console.error(e));
     process.exit(1);
   }
-}
+};

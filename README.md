@@ -9,17 +9,18 @@
 
 ## CLI
 
-Just run `prettignore` with a valid configuration, and watch your files get pretty!
+Run `prettignore --help` for details
 
 ## Configuration
 
 Make a `.prettignorerc.json` file in the root of your project.
 
-```jsonc
-{
-  "eol": "crlf", // "lf" or "crlf" (default)
-  "include": [], // array of globs (empty by default)
-  "exclude": [] //  array of globs (empty by default)
+The config should have the following structure:
+
+```ts
+interface PrettignoreConfig {
+  files: string[];
+  endOfLine?: 'lf' | 'crlf' | 'cr' | 'auto';
 }
 ```
 
@@ -34,7 +35,7 @@ formatLine(content);
 ### formatFile(content: string, config: PrettignoreConfig)
 
 ```ts
-formatFile(content, { eol: 'crlf' });
+formatFile(content, { endOfLine: 'lf' });
 ```
 
 ## Examples

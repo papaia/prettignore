@@ -1,4 +1,4 @@
 {
-  "eol": "crlf",
-  "include": [".*ignore"]
+  "endOfLine": "crlf",
+  "files": [".*ignore"]
 }

@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "globby": "^11.0.1",
+    "minimist": "^1.2.5",
+    "outdent": "^0.8.0",
     "time-span": "^4.0.0"
   },
   "devDependencies": {
