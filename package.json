@@ -1,6 +1,6 @@
 {
   "name": "prettignore",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Prettier but for ignore files",
   "main": "dist/index.js",
   "files": [
