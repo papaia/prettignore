@@ -26,13 +26,13 @@ interface PrettignoreConfig {
 
 ## API
 
-### formatLine(content: string)
+### formatLine(line: string): string
 
 ```ts
-formatLine(content);
+formatLine(line);
 ```
 
-### formatFile(content: string, config: PrettignoreConfig)
+### formatFile(content: string, config: PrettignoreConfig): string
 
 ```ts
 formatFile(content, { endOfLine: 'lf' });
@@ -43,21 +43,21 @@ formatFile(content, { endOfLine: 'lf' });
 ### Adds spaces after comments
 
 <!-- prettier-ignore -->
-```
+```ignore
 #just a nice comment!
 ```
 
 Becomes:
 
 <!-- prettier-ignore -->
-```
+```ignore
 # just a nice comment!
 ```
 
 ### Removes trailing and leading spaces and lines
 
 <!-- prettier-ignore -->
-```
+```ignore
 
         dist
               build
@@ -68,7 +68,7 @@ Becomes:
 Becomes:
 
 <!-- prettier-ignore -->
-```
+```ignore
 dist
 build
 ```
@@ -76,7 +76,7 @@ build
 ### Removes line gaps larger than one line
 
 <!-- prettier-ignore -->
-```
+```ignore
 dist
 
 
@@ -87,8 +87,50 @@ build
 Becomes:
 
 <!-- prettier-ignore -->
-```
+```ignore
 dist
 
 build
+```
+
+### E v e r y t h i n g
+
+<!-- prettier-ignore -->
+```ignore
+
+
+dist      
+
+    .ignored*
+
+
+
+    #comment
+
+
+  # another comment
+
+  build/
+
+  .secretfile.json
+
+
+
+  
+```
+
+Becomes:
+
+```ignore
+dist
+
+.ignored*
+
+# comment
+
+# another
+
+build/
+
+.secretfile.json
 ```
