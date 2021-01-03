@@ -2,9 +2,19 @@
 <h2 align="center">Prettier but for ignore files!</h2>
 
 <p align="center">
-  <em>
-    Format any .*ignore file with ease!
-  </em>
+  <em>Format any .*ignore file with ease!</em>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/prettignore">
+    <img alt="npm version" src="https://img.shields.io/npm/v/prettignore.svg?style=flat-square">
+  </a>
+  <a href="https://www.npmjs.com/package/prettignore">
+    <img alt="weekly downloads from npm" src="https://img.shields.io/npm/dw/prettignore.svg?style=flat-square">
+  </a>
+  <a>
+    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+  </a>
 </p>
 
 ## CLI
