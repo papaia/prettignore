@@ -38,7 +38,7 @@ async function main() {
     ...fileOptions,
     ...cliOptions,
   };
-  console.log(config);
+
   validateConfig(config);
 
   if (!config.files?.length) {
