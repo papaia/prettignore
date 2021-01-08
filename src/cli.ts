@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { FormatOptions, formatFile, version } from '.';
 import globby from 'globby';
 import { helpMenu } from './constants';
