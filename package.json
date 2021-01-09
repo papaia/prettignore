@@ -40,7 +40,6 @@
       "@commitlint/config-conventional"
     ]
   },
-  "prettier": "@papaia/prettier",
   "ava": {
     "extensions": [
       "ts"
@@ -66,7 +65,8 @@
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "micromatch": "^4.0.2",
-    "prettier": "^2.2.1",
+    "prettier": "2.2.1",
+    "prettier-plugin-packagejson": "^2.2.9",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
