@@ -3251,7 +3251,7 @@ specifiers:
   micromatch: ^4.0.2
   minimist: ^1.2.5
   outdent: ^0.8.0
-  prettier: 2.2.1
+  prettier: ^2.2.1
   prettier-plugin-packagejson: ^2.2.9
   rimraf: ^3.0.2
   time-span: ^4.0.0
