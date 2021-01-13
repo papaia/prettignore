@@ -1,7 +1,7 @@
 import { FormatOptions, formatFile, version } from '.';
 import globby from 'globby';
-import { helpMenu } from './constants';
 import { grey, tryRequire, validateConfig } from './utils';
+import { helpMenu } from './constants';
 import { join } from 'path';
 import minimist from 'minimist';
 import { readFile, writeFile } from 'fs/promises';
