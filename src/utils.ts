@@ -34,7 +34,8 @@ const makeParamError = (param: string) =>
 export const validateConfig = (config: PrettignoreConfig) => {
   const errors = [];
   if (!Array.isArray(config.files)) errors.push(makeParamError('files'));
-  if (config.endOfLine && !EndOfLine[config.endOfLine]) errors.push(makeParamError('endOfLine'));
+  if (config.endOfLine && !EndOfLine[config.endOfLine])
+    errors.push(makeParamError('endOfLine'));
   if (errors.length) {
     errors.forEach((e) => console.error(e));
     process.exit(1);

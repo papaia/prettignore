@@ -6,7 +6,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@papaia/prettier': 2.0.1
+  '@papaia/prettier': 2.2.0
   '@papaia/tsconfig': 1.0.1
   '@types/minimist': 1.2.1
   '@types/node': 14.14.22
@@ -228,10 +228,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
-  /@papaia/prettier/2.0.1:
+  /@papaia/prettier/2.2.0:
     dev: true
     resolution:
-      integrity: sha512-Tu9GKX2yM7wcyhUBB2MahQT6f6FTHB3kK7LrHljWMsc4ByA63xeZCtiMkPzzY+wWjLGVZLjVeNAUf54BVYDGPA==
+      integrity: sha512-a15a1rGQba/ERu1vrhWvwkP/lx5hH9MBUihd1IJH5m/PRI0gTiLsuozHPyX5SAZ3OWqPk13oLkvA/y5bD6CiNQ==
   /@papaia/tsconfig/1.0.1:
     dev: true
     resolution:
@@ -3231,7 +3231,7 @@ packages:
 specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
-  '@papaia/prettier': ^2.0.1
+  '@papaia/prettier': ^2.2.0
   '@papaia/tsconfig': ^1.0.1
   '@types/minimist': ^1.2.1
   '@types/node': ^14.14.22

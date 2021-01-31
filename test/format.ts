@@ -35,7 +35,10 @@ for (const [name, specs] of Object.entries(lineTests)) {
 
 const fileTests: Test = {
   'additional EOL at EOF': [
-    [`dist${EOL}build${EOL}${EOL}ignored${EOL}`, `dist${EOL}build${EOL}${EOL}ignored${EOL}`],
+    [
+      `dist${EOL}build${EOL}${EOL}ignored${EOL}`,
+      `dist${EOL}build${EOL}${EOL}ignored${EOL}`,
+    ],
     [`dist${EOL}${EOL}${EOL}${EOL}${EOL}`, `dist${EOL}`],
   ],
   'removes leading and extra trailing EOL': [

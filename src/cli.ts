@@ -24,7 +24,9 @@ async function main() {
     process.exit(0);
   }
 
-  const fileOptions = tryRequire<PrettignoreConfig>(join(process.cwd(), '.prettignorerc.json'))!;
+  const fileOptions = tryRequire<PrettignoreConfig>(
+    join(process.cwd(), '.prettignorerc.json'),
+  )!;
   if (cliOptions.help || (!fileOptions && !files.length)) {
     console.log(helpMenu);
     process.exit(0);
@@ -57,7 +59,9 @@ async function main() {
     const newContent = formatFile(oldContent, config);
     await writeFile(path, newContent);
 
-    console.log(`${oldContent === newContent ? grey(stringPath) : stringPath} ${end.rounded()}ms`);
+    console.log(
+      `${oldContent === newContent ? grey(stringPath) : stringPath} ${end.rounded()}ms`,
+    );
   }
 }
 
