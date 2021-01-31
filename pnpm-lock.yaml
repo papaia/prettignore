@@ -7,6 +7,7 @@ devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@papaia/prettier': 2.0.1
+  '@papaia/tsconfig': 1.0.1
   '@types/minimist': 1.2.1
   '@types/node': 14.14.22
   add-shebang: 0.1.0
@@ -231,6 +232,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Tu9GKX2yM7wcyhUBB2MahQT6f6FTHB3kK7LrHljWMsc4ByA63xeZCtiMkPzzY+wWjLGVZLjVeNAUf54BVYDGPA==
+  /@papaia/tsconfig/1.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-xLedxuhOK9xJR2g3UJraUVTGYua1MVC2XV6+yE3UaigLB7V+rglfC14fWt5ygC7B23PxkgJP+LuasMOSGDiYnw==
   /@sindresorhus/is/0.14.0:
     dev: true
     engines:
@@ -3227,6 +3232,7 @@ specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@papaia/prettier': ^2.0.1
+  '@papaia/tsconfig': ^1.0.1
   '@types/minimist': ^1.2.1
   '@types/node': ^14.14.22
   add-shebang: ^0.1.0
