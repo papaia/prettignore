@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "config:js-lib",
+    ":disableMajorUpdates"
+  ],
+  "semanticCommits": "enabled"
+}
