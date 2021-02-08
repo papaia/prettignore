@@ -16,7 +16,6 @@ async function main() {
     string: ['endOfLine'],
     boolean: ['help', 'version'],
     alias: { help: 'h', version: 'v' },
-    unknown: () => false,
   });
 
   if (cliOptions.version) {
@@ -33,10 +32,10 @@ async function main() {
   }
 
   const config: Required<PrettignoreConfig> = {
-    files,
     endOfLine: 'lf',
     ...fileOptions,
     ...cliOptions,
+    files: files.length ? files : fileOptions.files ?? [],
   };
 
   validateConfig(config);
