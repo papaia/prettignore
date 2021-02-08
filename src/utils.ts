@@ -33,9 +33,12 @@ const makeParamError = (param: string) =>
   `Invalid or missing \`${param}\` option given to prettignore.`;
 export const validateConfig = (config: PrettignoreConfig) => {
   const errors = [];
-  if (!Array.isArray(config.files)) errors.push(makeParamError('files'));
-  if (config.endOfLine && !EndOfLine[config.endOfLine])
+  if (!Array.isArray(config.files)) {
+    errors.push(makeParamError('files'));
+  }
+  if (config.endOfLine && !EndOfLine[config.endOfLine]) {
     errors.push(makeParamError('endOfLine'));
+  }
   if (errors.length) {
     errors.forEach((e) => console.error(e));
     process.exit(1);
