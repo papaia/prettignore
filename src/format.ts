@@ -20,9 +20,13 @@ export function formatFile(content: string, options: Required<FormatOptions>): s
   const eol = EndOfLine[eolType];
   const manyEol = new RegExp(`(?<=(?:${eol}){2})(?:${eol})+`, 'g');
 
+  const trimmed = content.trim();
+  if (!trimmed.length) {
+    return content;
+  }
+
   return (
-    content
-      .trim()
+    trimmed
       .split(/\r\n|\r|\n/g)
       .map(formatLine)
       .join(eol)
