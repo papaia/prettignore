@@ -7,9 +7,11 @@ module.exports = (files) => {
     ignore: 'dist',
   });
   if (tsFiles.length) {
-    toRun.push('npm run build');
-    toRun.push('npm test');
+    toRun.push('pnpm run build');
+    toRun.push('pnpm test');
   }
-  if (forPrettier.length) toRun.push(`prettier --write ${forPrettier.join(' ')}`);
+  if (forPrettier.length) {
+    toRun.push(`pnpx --no-install prettier --write ${forPrettier.join(' ')}`);
+  }
   return toRun;
 };
