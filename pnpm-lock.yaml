@@ -9,7 +9,7 @@ devDependencies:
   '@papaia/prettier': 2.2.0
   '@papaia/tsconfig': 1.0.1
   '@types/minimist': 1.2.1
-  '@types/node': 14.14.32
+  '@types/node': 14.14.33
   add-shebang: 0.1.0
   ava: 3.15.0
   husky: 5.1.3
@@ -269,10 +269,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
-  /@types/node/14.14.32:
+  /@types/node/14.14.33:
     dev: true
     resolution:
-      integrity: sha512-/Ctrftx/zp4m8JOujM5ZhwzlWLx22nbQJiVqz8/zE15gOeEW+uly3FSX4fGFpcfEvFzXcMCJwq9lGVWgyARXhg==
+      integrity: sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -3178,7 +3178,7 @@ specifiers:
   '@papaia/prettier': 2.2.0
   '@papaia/tsconfig': 1.0.1
   '@types/minimist': 1.2.1
-  '@types/node': 14.14.32
+  '@types/node': 14.14.33
   add-shebang: 0.1.0
   ava: 3.15.0
   globby: ^11.0.2
