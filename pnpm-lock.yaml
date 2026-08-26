@@ -16,7 +16,7 @@ devDependencies:
   lint-staged: 10.5.4
   micromatch: 4.0.2
   prettier: 2.2.1
-  prettier-plugin-packagejson: 2.2.10_prettier@2.2.1
+  prettier-plugin-packagejson: 2.5.22_prettier@2.2.1
   rimraf: 3.0.2
   ts-node: 9.1.1_typescript@4.2.3
   typescript: 4.2.3
@@ -250,25 +250,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==
-  /@types/glob/7.1.3:
-    dependencies:
-      '@types/minimatch': 3.0.3
-      '@types/node': 14.14.31
-    dev: true
-    resolution:
-      integrity: sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==
-  /@types/minimatch/3.0.3:
-    dev: true
-    resolution:
-      integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
   /@types/minimist/1.2.1:
     dev: true
     resolution:
       integrity: sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
-  /@types/node/14.14.31:
-    dev: true
-    resolution:
-      integrity: sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
   /@types/node/14.14.33:
     dev: true
     resolution:
@@ -989,18 +974,18 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-1shh9DQ23L16oXSZKB2JxpL7iMy2E0S9d517ptA1P8iw0alkPtQcrKH7ru31rYtKwF499HkTu+DRzq3TCKDFRQ==
-  /detect-indent/6.0.0:
+  /detect-indent/7.0.2:
     dev: true
     engines:
-      node: '>=8'
+      node: '>=12.20'
     resolution:
-      integrity: sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
-  /detect-newline/3.1.0:
+      integrity: sha512-y+8xyqdGLL+6sh0tVeHcfP/QDd8gUgbasolJJpY7NgeQGSZ739bDtSiaiDgtoicy+mtYB81dKLxO9xRhCyIB3A==
+  /detect-newline/4.0.1:
     dev: true
     engines:
-      node: '>=8'
+      node: ^12.20.0 || ^14.13.1 || >=16.0.0
     resolution:
-      integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
+      integrity: sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==
   /diff/4.0.2:
     dev: true
     engines:
@@ -1146,6 +1131,19 @@ packages:
       reusify: 1.0.4
     resolution:
       integrity: sha512-AWuv6Ery3pM+dY7LYS8YIaCiQvUaos9OB1RyNgaOWnaX+Tik7Onvcsf8x8c+YtDeT0maYLniBip2hox5KtEXXA==
+  /fdir/6.5.0_picomatch@4.0.7:
+    dependencies:
+      picomatch: 4.0.7
+    dev: true
+    engines:
+      node: '>=12.0.0'
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+    resolution:
+      integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
   /figures/3.2.0:
     dependencies:
       escape-string-regexp: 1.0.5
@@ -1247,10 +1245,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==
-  /git-hooks-list/1.0.3:
+  /git-hooks-list/4.2.1:
     dev: true
     resolution:
-      integrity: sha512-Y7wLWcrLUXwk2noSka166byGCvhMtDRpgHdzCno1UQv/n/Hegp++a2xBWJL1lJarnKD3SWaljD+0z1ztqxuKyQ==
+      integrity: sha512-WNvqJjOxxs/8ZP9+DWdwWJ7cDsd60NHf39XnD82pDVrKO5q7xfPqpkK6hwEAmBa/ZSEE4IOoR75EzbbIuwGlMw==
   /git-raw-commits/2.0.10:
     dependencies:
       dargs: 7.0.0
@@ -1298,21 +1296,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-v8ho2DS5RiCjftj1nD9NmnfaOzTdud7RRnVd9kFNOjqZbISlx5DQ+OrTkywgd0dIt7oFCvKetZSHoHcP3sDdiA==
-  /globby/10.0.0:
-    dependencies:
-      '@types/glob': 7.1.3
-      array-union: 2.1.0
-      dir-glob: 3.0.1
-      fast-glob: 3.2.5
-      glob: 7.1.6
-      ignore: 5.1.8
-      merge2: 1.4.1
-      slash: 3.0.0
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-3LifW9M4joGZasyYPz2A1U74zbC/45fvpXUvO/9KbSa+VV0aGZarWkfdgKyR9sExNP0t0x0ss/UMJpNpcaTspw==
   /globby/11.0.2:
     dependencies:
       array-union: 2.1.0
@@ -1596,12 +1579,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
-  /is-plain-obj/2.1.0:
+  /is-plain-obj/4.1.0:
     dev: true
     engines:
-      node: '>=8'
+      node: '>=12'
     resolution:
-      integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
+      integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==
   /is-plain-object/5.0.0:
     dev: true
     engines:
@@ -2229,6 +2212,12 @@ packages:
       node: '>=8.6'
     resolution:
       integrity: sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
+  /picomatch/4.0.7:
+    dev: true
+    engines:
+      node: '>=12'
+    resolution:
+      integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==
   /pify/4.0.1:
     dev: true
     engines:
@@ -2280,15 +2269,18 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
-  /prettier-plugin-packagejson/2.2.10_prettier@2.2.1:
+  /prettier-plugin-packagejson/2.5.22_prettier@2.2.1:
     dependencies:
       prettier: 2.2.1
-      sort-package-json: 1.49.0
+      sort-package-json: 3.6.0
     dev: true
     peerDependencies:
       prettier: '>= 1.16.0'
+    peerDependenciesMeta:
+      prettier:
+        optional: true
     resolution:
-      integrity: sha512-/meFZrpGSg/F3jXspBJikHBLf/m1ol6XJjYslM++AQno7B/SPNrGICMMck0qHBU+f7vVfqbZmdC/OO5opU3HPw==
+      integrity: sha512-G6WalmoUssKF8ZXkni0+n4324K+gG143KPysSQNW+FrR0XyNb3BdRxchGC/Q1FE/F702p7/6KU7r4mv0WSWbzA==
   /prettier/2.2.1:
     dev: true
     engines:
@@ -2561,6 +2553,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
+  /semver/7.8.5:
+    dev: true
+    engines:
+      node: '>=10'
+    hasBin: true
+    resolution:
+      integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==
   /serialize-error/7.0.1:
     dependencies:
       type-fest: 0.13.1
@@ -2616,22 +2615,25 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==
-  /sort-object-keys/1.1.3:
+  /sort-object-keys/2.1.0:
     dev: true
     resolution:
-      integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==
-  /sort-package-json/1.49.0:
+      integrity: sha512-SOiEnthkJKPv2L6ec6HMwhUcN0/lppkeYuN1x63PbyPRrgSPIuBJCiYxYyvWRTtjMlOi14vQUCGUJqS6PLVm8g==
+  /sort-package-json/3.6.0:
     dependencies:
-      detect-indent: 6.0.0
-      detect-newline: 3.1.0
-      git-hooks-list: 1.0.3
-      globby: 10.0.0
-      is-plain-obj: 2.1.0
-      sort-object-keys: 1.1.3
+      detect-indent: 7.0.2
+      detect-newline: 4.0.1
+      git-hooks-list: 4.2.1
+      is-plain-obj: 4.1.0
+      semver: 7.8.5
+      sort-object-keys: 2.1.0
+      tinyglobby: 0.2.17
     dev: true
+    engines:
+      node: '>=20'
     hasBin: true
     resolution:
-      integrity: sha512-3YuqFGThwc9X0TZLYohOUJJ/P6uJIVcTeuJOc6ZWw4f1fHpTHIfVysKer4qXtrZ2zvwwU2aEcb555Bo+2fwIgQ==
+      integrity: sha512-fyJsPLhWvY7u2KsKPZn1PixbXp+1m7V8NWqU8CvgFRbMEX41Ffw1kD8n0CfJiGoaSfoAvbrqRRl/DcHO8omQOQ==
   /source-map-support/0.5.19:
     dependencies:
       buffer-from: 1.1.1
@@ -2852,6 +2854,15 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-mcW/VZWJZq9tBtg73zgA3IL67F0=
+  /tinyglobby/0.2.17:
+    dependencies:
+      fdir: 6.5.0_picomatch@4.0.7
+      picomatch: 4.0.7
+    dev: true
+    engines:
+      node: '>=12.0.0'
+    resolution:
+      integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==
   /tmp/0.0.31:
     dependencies:
       os-tmpdir: 1.0.2
@@ -3188,7 +3199,7 @@ specifiers:
   minimist: ^1.2.5
   outdent: ^0.8.0
   prettier: 2.2.1
-  prettier-plugin-packagejson: 2.2.10
+  prettier-plugin-packagejson: 2.5.22
   rimraf: 3.0.2
   time-span: ^4.0.0
   ts-node: 9.1.1
